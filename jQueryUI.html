@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mnllxxq</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    .frameset {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+</head>
+<body>
+  <div class="frameset">
+    <iframe class="frame" src="top.html" name="TOP" scrolling="no"></iframe>
+    <div class="inner-frameset">
+      <iframe class="frame" src="menu.html" name="MENU"></iframe>
+      <iframe class="frame" src="content.html" name="CONTENT"></iframe>
+    </div>
+  </div>
+
+  <script>
+    $(function() {
+      $(".frameset").resizable({
+        handles: "s",
+        minHeight: 100
+      });
+
+      $(".frameset").draggable();
+    });
+  </script>
+</body>
+</html>
